@@ -1,0 +1,23 @@
+
+public class Main {
+
+	// Zaehlerobjekt Erzeugen und Zählen lassen in Enlosschleife. Bei 99
+	// Ueberlauf! ausgeben
+	// Sonst EinerUeberlauf anzeigen.
+
+	public static void main(String[] args) {
+
+		Zaehler counter = new Zaehler(0, 0);
+
+		while (true) {
+			try {
+				Zaehler.zaehlen(counter);
+			} catch (Ueberlauf e) {
+				return;
+			} catch (EinerUeberlauf e) {
+				return;
+		}
+
+	}
+}
+}

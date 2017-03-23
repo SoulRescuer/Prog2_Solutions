@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1490129840510_1" label="Prog2" name="Prog2">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Over Underflow 0.3" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1490130288382_2" label="Übungen" name="Übungen">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Over Underflow 0.3" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/EmployeeSalary 0.2" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Birthday Exception 0.1 (new)" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1489681582429_0" label="Window Working Set" name="Aggregate for window 1489681582429"/>
+<mruList name="Übungen"/>
+<mruList name="Prog2"/>
+</workingSetManager>

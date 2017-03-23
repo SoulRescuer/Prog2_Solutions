@@ -1,0 +1,9 @@
+
+public class EinerUeberlauf extends Exception{
+	
+	public EinerUeberlauf {
+		super();
+		
+	}
+
+}

@@ -1,0 +1,34 @@
+
+public class Zaehler {
+	private int einer;
+	private int zehner;
+
+	
+	public Zaehler (int x, int y) {
+		this.einer=x;
+		this.zehner=y;
+	}
+	
+	
+	/* Soll die „Einer“ um Eins erhöhen, den aktuellen Wert
+	der „Einer“ ausgeben und bei einem Überlauf der „Einer“ die Exception
+	EinerUeberlauf werfen*/
+	public void erhoeheUmEins(){
+		
+	}
+	
+	
+	
+	
+	public void erhoeheUmZehn(){
+	
+	}
+	
+	
+	
+	public void zaehlen() {
+		
+	}
+	
+	
+}

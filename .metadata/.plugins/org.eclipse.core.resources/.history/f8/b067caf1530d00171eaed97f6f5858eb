@@ -1,0 +1,10 @@
+
+public class Zaehler {
+	private int einer;
+	private int zehner;
+
+	
+	public Zaehler (int x, int y) {
+		this.einer=x;
+		this.zehner=y;
+}
