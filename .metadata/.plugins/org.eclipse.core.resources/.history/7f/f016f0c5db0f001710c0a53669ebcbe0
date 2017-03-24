@@ -1,0 +1,13 @@
+
+public class Karte {
+
+	
+	public enum Farbe{
+		PIK, HERZ, KARO;	
+	}
+	
+	public enum Wert{
+		SIEBEN, ACHT, NEUN, ZEHN, BAUER, DAME, KOENIG, ASS;
+	}
+
+}
