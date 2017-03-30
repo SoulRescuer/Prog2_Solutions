@@ -1,5 +1,0 @@
-
-public enum Wert {
-	
-	SIEBEN, ACHT, NEUN, ZEHN, BAUER, DAME, KOENIG, ASS;
-}

@@ -6,7 +6,10 @@
 <fullyQualifiedTypeName name="Zaehler"/>
 <fullyQualifiedTypeName name="Karte.Wert"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
-<fullyQualifiedTypeName name="Karte.Farbe"/>
 <fullyQualifiedTypeName name="me.Marius.packe.Karte.Wert"/>
 <fullyQualifiedTypeName name="me.Marius.packe.Karte.Farbe"/>
+<fullyQualifiedTypeName name="Karte.Farbe"/>
+<fullyQualifiedTypeName name="Karte.Werte"/>
+<fullyQualifiedTypeName name="my.Package.Marius.Karte.Farbe"/>
+<fullyQualifiedTypeName name="my.Package.Marius.Karte.Werte"/>
 </qualifiedTypeNameHistroy>

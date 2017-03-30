@@ -1,0 +1,13 @@
+package my.Package.marius;
+
+
+public class Person {
+	public String vorname;
+	public String nachname;
+	public String straßenname;
+	public String ort;
+	public int gehalt;
+	public int hausnummer;
+	
+
+}

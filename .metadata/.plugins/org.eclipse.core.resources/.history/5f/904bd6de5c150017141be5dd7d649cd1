@@ -1,0 +1,13 @@
+package my.Package.marius;
+
+public class Dozent extends Person {
+	private final String lehrgebiet; 
+
+	public Dozent(String vorname, String nachname, String straﬂenname, int hausnummer, int plz, String ort,
+			int gehalt, String lehrgebiet) {
+		super(vorname, nachname, straﬂenname, hausnummer, plz, ort, gehalt);
+		this.lehrgebiet=lehrgebiet;
+		
+	}
+
+}

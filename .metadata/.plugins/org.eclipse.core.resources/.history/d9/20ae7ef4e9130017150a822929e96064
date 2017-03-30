@@ -1,0 +1,21 @@
+
+public class Karte {
+	
+	private Farbe f;
+	private Werte w;
+	
+	public enum Farbe {
+		KREUZ, PIK, HERZ ,KARO
+	}
+	
+	public enum Werte {
+		SIEBEN, ACHT, NEUN, ZEHN, BAUER, DAME, KOENIG, ASS
+	}
+	
+	public Karte (Farbe f, Werte w) {
+		this.f=Farbe;
+		this.w=Werte;
+		
+	}
+
+}

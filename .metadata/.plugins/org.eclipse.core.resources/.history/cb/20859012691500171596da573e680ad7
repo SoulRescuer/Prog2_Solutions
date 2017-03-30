@@ -1,0 +1,17 @@
+package my.Package.marius;
+
+public class Test {
+	
+	
+	 public static void main (String[] args){
+		 
+		 Student aStudent = new Student(“Peter“, “Müller“, “Hauptstrasse“, “4a“, 96450, “Coburg“, 455555, 1000 );
+		 Dozent aDozent = new Dozent(“Hans“, “Meyer“, “Jenaerstrasse“, “21“, 96450, “Coburg“, “Betriebssysteme“, 1000 );
+		 …
+		 //in personArray sollen mindestens 5 Objekte enthalten sein, mind. 1 vom Typ Person, mind. 1 vom Typ Student und mind. 1 vom Typ Dozent.
+		 for (Person p : personArray)
+		 System.out.println(p);
+	}
+	
+
+}

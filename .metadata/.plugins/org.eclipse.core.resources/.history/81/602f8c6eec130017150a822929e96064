@@ -1,0 +1,16 @@
+
+public class Kartenspiel {
+	private int numberOfCards;
+	
+	public Kartenspiel (int x){
+		this.numberOfCards=x;
+	}
+	
+	
+	
+	
+	public String toString(){
+		return numberOfCards;
+	}
+
+}

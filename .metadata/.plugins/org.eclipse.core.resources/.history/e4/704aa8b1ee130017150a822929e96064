@@ -1,0 +1,31 @@
+package my.Package.Marius;
+
+import my.Package.Marius.Karte.Farbe;
+import my.Package.Marius.Karte.Werte;
+
+public class Kartenspiel {
+	private int numberOfCards;
+	private Karte[] cards;
+	
+	public Kartenspiel (int x){
+		this.numberOfCards=x;
+		int random = (int)Math.random();
+		cards = new Karte[random];
+		Farbe[] fb= Farbe.values();
+		Werte[] wb = Werte.values();
+		
+		for(int p=0; p<random; p++){
+			Karte newCard = new Karte (fb [random],wb[random]);
+			cards[p] = newCard;
+		}
+	
+	}
+	
+	
+	
+	/*
+	public String toString(){
+		return 
+	}
+	*/
+}

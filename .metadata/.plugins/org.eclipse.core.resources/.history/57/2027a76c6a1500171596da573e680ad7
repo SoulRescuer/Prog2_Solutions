@@ -1,0 +1,15 @@
+package my.Package.marius;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Student aStudent = new Student("Peter", "Müller", "Hauptstrasse", 4, 96450, "Coburg", 455555, 1000 );
+		Dozent aDozent = new Dozent("Hans", "Meyer", "Jenaerstrasse", 21, 96450, "Coburg", "Betriebssysteme", 1000 );
+		Person aPerson = new Person ("Name", "Person", "Personstrasse", 3, 96450, "Personstadt", 0);
+		// for (Person p : personArray)
+		 //System.out.println(p);
+
+	}
+
+}
