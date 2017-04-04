@@ -1,0 +1,93 @@
+package my.Package.Marius;
+
+public abstract class Fahrzeug {
+	protected double geschwindigkeit;
+	protected double position;
+	protected final String name;
+
+	// Konstruktor Fahrzeug. Keine Instanzen, da abstract
+	public Fahrzeug(String name, double position, double geschwindigkeit) {
+		this.geschwindigkeit = geschwindigkeit;
+		this.position = position;
+		this.name = name;
+	}
+	
+	
+	
+	public double fahren(double minuten){
+		/*
+		 * Das Fahrzeug fährt minuten Minuten mit der aktuellen Geschwindigkeit
+		 * weiter. Als Resultat wird die aktuelle Position in km nach fahren
+		 * zurückgeliefert. fahren(5) bedeutet also, dass das Fahrzeug 5 Minuten mit
+		 * der aktuellen Geschwindigkeit weiterfährt.
+		 */
+			double tempCurrentSpeed= getGeschwindigkeit();
+			double tempPosition= getPosition();
+			tempPosition+= ((tempCurrentSpeed*minuten*60)/1000);
+			setPosition(tempPosition);
+			return tempPosition;
+		}
+	
+	
+	
+	
+
+	/*
+	 * To implement in Subclasses
+	 * ----------------------------------------------------
+	 */
+
+	public abstract double beschleunigen(double sekunden);
+	/*
+	 * Beschleunigt das Fahrzeug aus dem Stand. Die Dauer der Beschleunigung
+	 * gibt sekunden in Sekunden an. Als Resultat wird die Position des
+	 * Fahrzeugs in km zurückgeliefert. Falls die Höchstgeschwindigkeit des
+	 * Fahrzeugs bereits vor Ablauf von sekunden erreicht ist, fährt das
+	 * Fahrzeug die verbleibenden Sekunden mit Höchstgeschwindigkeit weiter.
+	 */
+
+	public abstract double hoechstGeschwindigkeit();
+	/*
+	 * Liefert die Höchstgeschwindigkeit des Fahrzeugs. Dabei gelten folgende
+	 * Regeln: Die Höchstgeschwindigkeit aller Lkw’s ist 105 km/h, aller Pkw’s
+	 * 160 km/h und aller Pkw’s ohne ABS 140 km/h.
+	 */
+
+	
+	
+	
+	
+	
+	/*
+	 * Getter und Setter
+	 * ----------------------------------------------------
+	 */
+
+	public double getGeschwindigkeit() {
+		return geschwindigkeit;
+	}
+
+	public void setGeschwindigkeit(double geschwindigkeit) {
+		this.geschwindigkeit = geschwindigkeit;
+	}
+
+	public double getPosition() {
+		return position;
+	}
+
+	public void setPosition(double position) {
+		this.position = position;
+	}
+
+	public String getName() {
+		return name;
+	}
+	
+
+	// To String Methode
+	@Override
+	public String toString() {
+		return name+ " " +" "+" "+"AktuellePosition:" +" "+ position+"km" + " "+ " " + " "+ " "+"AktuelleGeschwindigkeit:"+ geschwindigkeit+"m/s" + " ";
+	}
+
+}

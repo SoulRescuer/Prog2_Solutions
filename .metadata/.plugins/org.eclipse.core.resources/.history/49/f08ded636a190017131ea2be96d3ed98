@@ -1,0 +1,103 @@
+package my.Package.Marius;
+
+public abstract class Fahrzeug {
+	protected double geschwindigkeit;
+	protected double position;
+	protected double anhalteweg;
+	protected final String name;
+
+	// Konstruktor Fahrzeug. Keine Instanzen, da abstract
+	public Fahrzeug(String name) {
+		this.name = name;
+		this.geschwindigkeit = 0.0;
+		this.position = 0.0;
+		this.anhalteweg = 0.0;
+	}
+
+	public double fahren(double minuten) {
+		/*
+		 * Das Fahrzeug fährt minuten Minuten mit der aktuellen Geschwindigkeit
+		 * weiter. Als Resultat wird die aktuelle Position in km nach fahren
+		 * zurückgeliefert. fahren(5) bedeutet also, dass das Fahrzeug 5 Minuten
+		 * mit der aktuellen Geschwindigkeit weiterfährt.
+		 */
+		double tempCurrentSpeed = getGeschwindigkeit();
+		setGeschwindigkeit(tempCurrentSpeed);
+		double tempPosition = getPosition();
+		tempPosition += ((tempCurrentSpeed * minuten *60) / 1000.0);
+		setPosition(tempPosition);
+		return tempPosition;
+	}
+
+	/*
+	 * To implement in Subclasses
+	 * ----------------------------------------------------
+	 */
+
+	public abstract double beschleunigen(double sekunden);
+	/*
+	 * Beschleunigt das Fahrzeug aus dem Stand. Die Dauer der Beschleunigung
+	 * gibt sekunden in Sekunden an. Als Resultat wird die Position des
+	 * Fahrzeugs in km zurückgeliefert. Falls die Höchstgeschwindigkeit des
+	 * Fahrzeugs bereits vor Ablauf von sekunden erreicht ist, fährt das
+	 * Fahrzeug die verbleibenden Sekunden mit Höchstgeschwindigkeit weiter.
+	 */
+
+	public abstract double hoechstGeschwindigkeit();
+	/*
+	 * Liefert die Höchstgeschwindigkeit des Fahrzeugs. Dabei gelten folgende
+	 * Regeln: Die Höchstgeschwindigkeit aller Lkw’s ist 105 km/h, aller Pkw’s
+	 * 160 km/h und aller Pkw’s ohne ABS 140 km/h.
+	 */
+
+	public abstract double stoppen();
+	/*
+	 * Stoppt das Fahrzeug mit der aktuellen Geschwindigkeit, d.h. es wird eine
+	 * Vollbremsung ausgelöst. Als Resultat wird der Anhalteweg in m
+	 * zurückgeliefert.
+	 */
+
+	/*
+	 * Getter und Setter ----------------------------------------------------
+	 */
+
+	public double getGeschwindigkeit() {
+		return geschwindigkeit / 3.6;
+	}
+
+	public void setGeschwindigkeit(double geschwindigkeit) {
+		this.geschwindigkeit = geschwindigkeit * 3.6;
+	}
+
+	public double getPosition() {
+		return position;
+	}
+
+	public void setPosition(double position) {
+		this.position = position;
+	}
+
+	public void setAnhalteweg(double anhalteweg) {
+		this.anhalteweg = anhalteweg;
+	}
+
+	public double getAnhalteweg() {
+		return anhalteweg;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	// To String Methode
+	@Override
+	public String toString() {
+		StringBuffer b = new StringBuffer();
+		b.append(name + "\t");
+		b.append("AktuellePosition: " + Math.round(position*100.0)/100.0 +"km" + "\t");
+		b.append("AktuelleGeschwindigkeit: " + geschwindigkeit +"km/h" +"\t");
+		b.append("Anhalteweg: " + Math.round(anhalteweg*100.0)/100.0 +"m");
+		return b.toString();
+	}
+
+}

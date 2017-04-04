@@ -1,0 +1,9 @@
+package my.Package.Marius;
+
+public class PkwOAbs extends Pkw {
+
+	public PkwOAbs(String name, double geschwindigkeit, double position) {
+		super(name, geschwindigkeit, position);
+	}
+
+}

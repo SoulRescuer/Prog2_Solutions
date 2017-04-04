@@ -7,6 +7,7 @@
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="package my.Package.Marius;"/>
 			<item value="&#x09;&#x09;"/>
 		</list>
 		<list key="replacehistory">

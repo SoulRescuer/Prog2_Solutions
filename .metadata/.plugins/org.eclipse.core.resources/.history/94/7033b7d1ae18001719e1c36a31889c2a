@@ -1,0 +1,85 @@
+package my.Package.Marius;
+
+public class Lkw extends Fahrzeug {
+	private final static double maxSpeed = 105.0;
+	private final static double acceleration = 0.5;
+	private final double maxLadung;
+	private double ladung;
+
+	// Konstruktor LKW
+	public Lkw(String name, double geschwindigkeit, double position, double ladung, double maxLadung) {
+		super(name, position, geschwindigkeit);
+		this.ladung = ladung;
+		this.maxLadung = maxLadung;
+	}
+
+	@Override
+	public double beschleunigen(double sekunden) {
+		double tempCurrentSpeed = Lkw.acceleration * sekunden;
+		double timeToReachMaxSpeed;
+		double tempPosition;
+		setGeschwindigkeit(tempCurrentSpeed);
+		if (tempCurrentSpeed >= hoechstGeschwindigkeit()) {
+			setGeschwindigkeit(hoechstGeschwindigkeit());
+			tempCurrentSpeed = hoechstGeschwindigkeit();
+			timeToReachMaxSpeed = tempCurrentSpeed / Lkw.acceleration;
+			tempPosition = 0.5 * Lkw.acceleration * sekunden * sekunden;
+			setPosition(tempPosition / 1000.0);
+			super.fahren((sekunden - timeToReachMaxSpeed) * 60.0);
+		} else {
+			tempPosition = super.getPosition();
+			tempPosition += ((0.5 * Lkw.acceleration * sekunden * sekunden) / 1000.0);
+			setPosition(tempPosition);
+		}
+		return super.getPosition();
+	}
+
+	public void beladen(double ladungInTonnen) {
+		if (istVollBeladen() == false) {
+			this.ladung += ladungInTonnen;
+		} else {
+			System.err.println("Maximal Ladung schon erreicht!!");
+		}
+	}
+
+	public void entladen(double ladungInTonnen) {
+		if (ladung != 0) {
+			this.ladung -= ladungInTonnen;
+		} else if (ladungInTonnen >= ladung) {
+			this.ladung = 0.0;
+		}
+	}
+
+	public boolean istVollBeladen() {
+		if (ladung >= maxLadung) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	@Override
+	public double stoppen() {
+		return 0;
+	}
+
+	@Override
+	public double hoechstGeschwindigkeit() {
+		return Lkw.maxSpeed;
+	}
+
+	@Override
+	public double fahren(double minuten) {
+		return super.fahren(minuten);
+	}
+
+	public static double getAcceleration() {
+		return Lkw.acceleration;
+	}
+
+	@Override
+	public String toString() {
+		return super.toString();
+	}
+
+}

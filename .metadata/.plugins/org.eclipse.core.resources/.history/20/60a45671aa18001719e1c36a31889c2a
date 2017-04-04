@@ -1,0 +1,61 @@
+package my.Package.Marius;
+
+public class Pkw extends Fahrzeug {
+	private final static double maxSpeed = 160.0;
+	private final static double acceleration = 2.0;
+
+	// Konstruktor PKW
+	public Pkw(String name, double geschwindigkeit, double position) {
+		super(name, position, geschwindigkeit);
+	}
+
+	@Override
+	public double beschleunigen(double sekunden) {
+		double tempCurrentSpeed = Pkw.getAcceleration() * sekunden;
+		double tempPosition;
+		double timeToReachMaxSpeed;
+		setGeschwindigkeit(tempCurrentSpeed);
+		if (tempCurrentSpeed >= hoechstGeschwindigkeit()) {
+			setGeschwindigkeit(hoechstGeschwindigkeit());
+			tempCurrentSpeed = hoechstGeschwindigkeit();
+			timeToReachMaxSpeed = tempCurrentSpeed / Pkw.acceleration;
+			tempPosition = 0.5 * Pkw.getAcceleration() * sekunden * sekunden;
+			setPosition(tempPosition / 1000.0);
+			fahren((sekunden - timeToReachMaxSpeed) * 60.0);
+		} else {
+			tempPosition = super.getPosition();
+			tempPosition += ((0.5 * Pkw.getAcceleration() * sekunden * sekunden) / 1000.0);
+			setPosition(tempPosition);
+		}
+		return super.getPosition();
+	}
+
+	@Override
+	public double stoppen() {
+		double tempCurrentSpeed2 = getGeschwindigkeit();
+		double tempAnhalteweg = getAnhalteweg();
+		tempAnhalteweg = 0.5 * (((tempCurrentSpeed2/10)*2) * (tempCurrentSpeed2/10)*2) + ((tempCurrentSpeed2/10)*3);
+		setGeschwindigkeit(0.0);
+		setAnhalteweg(tempAnhalteweg);
+		return 0;
+	}
+
+	@Override
+	public double hoechstGeschwindigkeit() {
+		return Pkw.maxSpeed;
+	}
+
+	@Override
+	public double fahren(double minuten) {
+		return super.fahren(minuten);
+	}
+
+	public static double getAcceleration() {
+		return Pkw.acceleration;
+	}
+
+	@Override
+	public String toString() {
+		return super.toString();
+	}
+}

@@ -1,0 +1,15 @@
+package my.Package.Marius;
+
+public class PkwOAbs extends Pkw {
+	private final static double maxSpeed = 140.0;
+
+	//Konstruktor PkwOAbs
+	public PkwOAbs(String name, double geschwindigkeit, double position) {
+		super(name, geschwindigkeit, position);
+	}
+
+	@Override
+	public double hoechstGeschwindigkeit() {
+		return PkwOAbs.maxSpeed;
+	}
+}

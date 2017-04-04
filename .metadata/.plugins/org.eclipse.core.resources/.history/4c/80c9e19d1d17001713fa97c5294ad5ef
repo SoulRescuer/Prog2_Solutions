@@ -1,0 +1,27 @@
+package my.Package.Marius;
+
+public class Pkw extends Fahrzeug {
+	private final static double maxSpeed = 160.0;
+	private final static double acceleration = 2.0;
+
+	
+	//Konstruktor PKW 
+	public Pkw(String name, double geschwindigkeit, double position) {
+		super(name, position, geschwindigkeit);
+	}
+
+
+
+	@Override
+	public double beschleunigen(double sekunden) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+	@Override
+	public double hoechstGeschwindigkeit() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}

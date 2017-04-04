@@ -12,4 +12,9 @@
 <fullyQualifiedTypeName name="Karte.Werte"/>
 <fullyQualifiedTypeName name="my.Package.Marius.Karte.Farbe"/>
 <fullyQualifiedTypeName name="my.Package.Marius.Karte.Werte"/>
+<fullyQualifiedTypeName name="my.Package.Marius.Fahrzeug"/>
+<fullyQualifiedTypeName name="my.Package.Marius.Pkw"/>
+<fullyQualifiedTypeName name="my.Package.Marius.PkwOAbs"/>
+<fullyQualifiedTypeName name="my.Package.Marius.Lkw"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
 </qualifiedTypeNameHistroy>
