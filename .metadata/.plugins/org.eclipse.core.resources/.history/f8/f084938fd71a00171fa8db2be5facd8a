@@ -1,0 +1,26 @@
+package my.Package.Marius;
+
+public class Wire implements Mobile {
+	private double lengthLeft;
+	private double lengthRiht;
+
+	/*
+	 * Konstruktor Wire Wire ist immer balance Wire muss 2 Sterne besitzen oder
+	 * ein anders Wire mit 2 Sternen
+	 */
+	public Wire() {
+
+	}
+
+	@Override
+	public double weight() {
+
+		return 0;
+	}
+
+	@Override
+	public void balance() {
+
+	}
+
+}

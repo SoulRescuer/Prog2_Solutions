@@ -30,7 +30,6 @@ public class Wire implements Mobile {
 		leftMobile.balance();
 		rightMobile.balance();
 		left=(lengthWire*rightMobile.weight())/(rightMobile.weight()+leftMobile.weight());
-		right=(lengthWire*leftMobile.weight())/(rightMobile.weight()+leftMobile.weight());
 		
 
 	}

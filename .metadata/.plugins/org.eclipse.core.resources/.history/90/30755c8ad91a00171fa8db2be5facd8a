@@ -4,8 +4,6 @@ public class Wire implements Mobile {
 	private double lengthWire;
 	private Mobile leftMobile;
 	private Mobile rightMobile;
-	private double left;
-	private double right;
 
 	/*
 	 * Konstruktor Wire Wire 
@@ -22,16 +20,12 @@ public class Wire implements Mobile {
 
 	@Override
 	public double weight() {
-		return leftMobile.weight()+rightMobile.weight();
+
+		return 0;
 	}
 
 	@Override
 	public void balance() {
-		leftMobile.balance();
-		rightMobile.balance();
-		left=(lengthWire*rightMobile.weight())/(rightMobile.weight()+leftMobile.weight());
-		right=(lengthWire*leftMobile.weight())/(rightMobile.weight()+leftMobile.weight());
-		
 
 	}
 

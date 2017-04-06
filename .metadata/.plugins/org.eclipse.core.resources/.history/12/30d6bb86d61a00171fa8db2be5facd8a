@@ -22,6 +22,6 @@ public class Star implements Mobile {
 	}
 	
 	public String toString(){
-		return ("Star | Gewicht: "+weight);
+		return "Star | Gewicht: "+weight);
 	}
 }

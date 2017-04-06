@@ -8,9 +8,6 @@ public interface Mobile {
 	public String toString(); 
 	//Erzeugt eine lesbare Textdarstellung eines Mobiles.
 	
-	public void balance();
-	//Balanciert ein Mobile aus. (siehe unten);
-	
-
-
+	public void balance() Balanciert ein Mobile aus. (siehe unten).
+	//
 }

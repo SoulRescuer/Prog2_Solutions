@@ -20,8 +20,4 @@ public class Star implements Mobile {
 	public void balance() {
 		
 	}
-	
-	public String toString(){
-		return ("Star | Gewicht: "+weight);
-	}
 }

@@ -4,34 +4,25 @@ public class Wire implements Mobile {
 	private double lengthWire;
 	private Mobile leftMobile;
 	private Mobile rightMobile;
-	private double left;
-	private double right;
 
 	/*
 	 * Konstruktor Wire Wire 
 	 * ist immer balance Wire muss 2 Sterne besitzen oder
-	 * ein anderes Wire mit 2 Sternen
+	 * ein anders Wire mit 2 Sternen
 	 */
 	public Wire(double legthWire, Mobile leftMobile, Mobile rightMobile) {
 		this.lengthWire=lengthWire;
-		this.rightMobile=rightMobile;
-		this.leftMobile=leftMobile;
-		balance();
 
 	}
 
 	@Override
 	public double weight() {
-		return leftMobile.weight()+rightMobile.weight();
+
+		return 0;
 	}
 
 	@Override
 	public void balance() {
-		leftMobile.balance();
-		rightMobile.balance();
-		left=(lengthWire*rightMobile.weight())/(rightMobile.weight()+leftMobile.weight());
-		right=(lengthWire*leftMobile.weight())/(rightMobile.weight()+leftMobile.weight());
-		
 
 	}
 

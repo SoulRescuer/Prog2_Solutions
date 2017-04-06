@@ -1,0 +1,12 @@
+package my.Package.Marius;
+
+public class Star implemetns Mobile {
+	public double weight;
+	
+	public Star(double weight) throws Excetion{
+		if(weight >0){
+			this.weight=weight;
+		}
+		
+	}
+}

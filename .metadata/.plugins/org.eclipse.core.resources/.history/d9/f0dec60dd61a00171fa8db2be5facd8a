@@ -11,17 +11,4 @@ public class Star implements Mobile {
 			this.weight=weight;
 		
 	}
-
-	@Override
-	public double weight() {
-		return weight;
-	}
-
-	public void balance() {
-		
-	}
-	
-	public String toString(){
-		return ("Star | Gewicht: "+weight);
-	}
 }

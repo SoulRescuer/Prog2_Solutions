@@ -9,8 +9,6 @@ public interface Mobile {
 	//Erzeugt eine lesbare Textdarstellung eines Mobiles.
 	
 	public void balance();
-	//Balanciert ein Mobile aus. (siehe unten);
-	
-
+	//Balanciert ein Mobile aus. (siehe unten).
 
 }
